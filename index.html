@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Class XII Results 2025</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+    }
+    .header {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-bottom: 3px solid #003366;
+    }
+    .header img {
+      width: 90px;
+    }
+    .header h1 {
+      margin: 10px 0 5px;
+      color: #003366;
+    }
+    .header h2 {
+      margin: 0;
+      color: #990000;
+    }
+    .form-container {
+      max-width: 600px;
+      background-color: #ffffff;
+      margin: 40px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      padding: 10px;
+    }
+    .form-title {
+      text-align: center;
+      background-color: #e5f0ff;
+      color: #003366;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .label-cell {
+      width: 40%;
+      background-color: #f9f9f9;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+    }
+    .button-row {
+      text-align: center;
+      background-color: #e5f0ff;
+    }
+    .button-row input {
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .button-row input[type="submit"] {
+      background-color: #003366;
+    }
+    .button-row input[type="reset"] {
+      background-color: #990000;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: gray;
+      margin-top: 30px;
+    }
+    .message {
+      color: red;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://cbse.gov.in/cbsenew/documents//CBSE_logo.png" alt="CBSE Logo">
+    <h1>Central Board of Secondary Education</h1>
+    <h2>Senior School Certificate Examination (Class XII) Results 2025</h2>
+  </div>
+
+  <div class="form-container">
+    <form id="resultForm">
+      <table>
+        <tr>
+          <td colspan="2" class="form-title">Enter Your Details</td>
+        </tr>
+        <tr>
+          <td class="label-cell">Roll Number:</td>
+          <td><input type="text" name="roll" required></td>
+        </tr>
+        <tr>
+          <td class="label-cell">School No.:</td>
+          <td><input type="text" name="school" required></td>
+        </tr>
+        <tr>
+          <td class="label-cell">Centre No.:</td>
+          <td><input type="text" name="center" required></td>
+        </tr>
+        <tr>
+          <td class="label-cell">Admit Card ID:</td>
+          <td><input type="text" name="admit" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="button-row">
+            <input type="submit" value="Submit">
+            &nbsp;&nbsp;
+            <input type="reset" value="Reset" onclick="clearMessage()">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="message" class="message"></div>
+  </div>
+
+  <div class="footer">
+    This site is designed and hosted by National Informatics Centre (NIC)<br>
+    Data Provided by CBSE, New Delhi
+  </div>
+
+  <script>
+    document.getElementById("resultForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("message").innerText = "Result will be displayed shortly after verification.";
+    });
+
+    function clearMessage() {
+      document.getElementById("message").innerText = "";
+    }
+  </script>
+
+</body>
+</html>
